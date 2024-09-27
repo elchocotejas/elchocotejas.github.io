@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Negro</title>
+  <link rel="stylesheet" href="styles.css"> 
+</head>
+<body>
+  <img src="negro.png" alt="Victor Manuel Caira Barrantes">
+  <h1>¿Eres Victor Manuel Caira Barrantes?</h1>
+  <div id="button-container">
+    <button id="so">
+      <span>Sí</span>
+    </button>
+
+    <button id="no">
+      <span>No</span>
+    </button>
+  </div>
+
+  <p id="message"></p>
+
+  <script>
+  
+    const btnYes = document.getElementById('so');
+    const btnNo = document.getElementById('no');
+    const message = document.getElementById('message');
+    let scaleYes = 1;
+    btnYes.addEventListener('click', function() {
+
+      window.location.href = "felicitaciones.html";
+    });
+
+    btnNo.addEventListener('click', function() {
+      message.textContent = "Aea apreta no más el sí :v";
+      message.style.display = "block";
+      message.style.color = "#3A7CA5"; 
+      
+      scaleYes += 0.5;
+      btnYes.style.transform = `scale(${scaleYes})`;
+
+      btnNo.style.marginLeft = `${(scaleYes - 1) * 40}px`; 
+    });
+  </script>
+</body>
+</html>

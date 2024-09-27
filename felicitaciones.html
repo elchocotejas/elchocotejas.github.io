@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Feliz Cumpleaños</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center; 
+      align-items: center; 
+      height: 100vh; 
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0; 
+      position: relative;
+      overflow: hidden;
+    }
+
+    #container {
+      display: flex;
+      justify-content: space-between; 
+      align-items: center;
+      width: 100%;
+      max-width: 1200px; 
+      padding: 20px;
+      position: relative;
+      z-index: 2; 
+      text-align: center;
+    }
+
+    h2 {
+      color: #000000;
+      margin-bottom: 20px;
+      font-size: 36px;
+    }
+
+    #antes {
+      width: 260px;
+      height: 500px;
+    }
+
+    #cabro {
+      width: 350px;
+      height: 500px;
+    }
+
+    #despues {
+      width: 330px;
+      height: 440px;
+    }
+
+    #border-collage {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      display: flex;
+      flex-wrap: wrap;
+      pointer-events: none;
+      z-index: 1; 
+    }
+
+    .collage-img {
+      object-fit: cover;
+      border: 3px solid #f8f3f2;
+      border-radius: 10px;
+      margin: 5px;
+      width: 100px;
+      height:100px;
+      transition: transform 0.3s ease;
+    }
+    .rotate {
+      transform: rotate(360deg);
+    }
+
+    .top-bottom {
+      width: 100px; 
+      height: 105px;
+    }
+
+    .left-right {
+      width: 100px;
+      height: 105px;
+    }
+
+    #top-border, #bottom-border {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+    }
+
+    #left-border, #right-border {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 100%;
+    }
+
+    #left-border {
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+    }
+
+    #right-border {
+      position: absolute;
+      right: 0;
+      top: 0;
+      bottom: 0;
+    }
+
+    #top-border {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+    }
+
+    #bottom-border {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+    }
+    .confetti {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    .confetti-piece {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      opacity: 0.7;
+      background-color: #FF5733; 
+      pointer-events: none;
+    }
+  </style>
+</head>
+<body>
+  <div id="border-collage">
+    <div id="top-border">
+      <img src="foto1.jpg" alt="Collage Foto 1" class="collage-img top-bottom">
+      <img src="foto2.jpg" alt="Collage Foto 2" class="collage-img top-bottom">
+      <img src="foto3.jpg" alt="Collage Foto 3" class="collage-img top-bottom">
+      <img src="foto4.jpg" alt="Collage Foto 4" class="collage-img top-bottom">
+      <img src="foto5.jpg" alt="Collage Foto 5" class="collage-img top-bottom">
+      <img src="foto1.jpg" alt="Collage Foto 1" class="collage-img top-bottom">
+      <img src="foto2.jpg" alt="Collage Foto 2" class="collage-img top-bottom">
+      <img src="foto3.jpg" alt="Collage Foto 3" class="collage-img top-bottom">
+      <img src="foto4.jpg" alt="Collage Foto 4" class="collage-img top-bottom">
+      <img src="foto5.jpg" alt="Collage Foto 5" class="collage-img top-bottom">
+      <img src="foto1.jpg" alt="Collage Foto 1" class="collage-img top-bottom">
+      <img src="foto2.jpg" alt="Collage Foto 2" class="collage-img top-bottom">
+      <img src="foto3.jpg" alt="Collage Foto 3" class="collage-img top-bottom">
+      <img src="foto4.jpg" alt="Collage Foto 4" class="collage-img top-bottom">
+      <img src="foto5.jpg" alt="Collage Foto 5" class="collage-img top-bottom">
+      <img src="foto1.jpg" alt="Collage Foto 1" class="collage-img top-bottom">
+      <img src="foto2.jpg" alt="Collage Foto 2" class="collage-img top-bottom">
+    </div>
+
+    <div id="bottom-border">
+      <img src="foto5.jpg" alt="Collage Foto 6" class="collage-img top-bottom">
+      <img src="foto4.jpg" alt="Collage Foto 7" class="collage-img top-bottom">
+      <img src="foto3.jpg" alt="Collage Foto 8" class="collage-img top-bottom">
+      <img src="foto2.jpg" alt="Collage Foto 9" class="collage-img top-bottom">
+      <img src="foto1.jpg" alt="Collage Foto 10" class="collage-img top-bottom">
+      <img src="foto5.jpg" alt="Collage Foto 6" class="collage-img top-bottom">
+      <img src="foto4.jpg" alt="Collage Foto 7" class="collage-img top-bottom">
+      <img src="foto3.jpg" alt="Collage Foto 8" class="collage-img top-bottom">
+      <img src="foto2.jpg" alt="Collage Foto 9" class="collage-img top-bottom">
+      <img src="foto1.jpg" alt="Collage Foto 10" class="collage-img top-bottom">
+      <img src="foto5.jpg" alt="Collage Foto 6" class="collage-img top-bottom">
+      <img src="foto4.jpg" alt="Collage Foto 7" class="collage-img top-bottom">
+      <img src="foto3.jpg" alt="Collage Foto 8" class="collage-img top-bottom">
+      <img src="foto2.jpg" alt="Collage Foto 9" class="collage-img top-bottom">
+      <img src="foto1.jpg" alt="Collage Foto 10" class="collage-img top-bottom">
+      <img src="foto5.jpg" alt="Collage Foto 6" class="collage-img top-bottom">
+      <img src="foto4.jpg" alt="Collage Foto 7" class="collage-img top-bottom">
+    </div>
+
+    <div id="left-border">
+      <img src="foto3.jpg" alt="Collage Foto 11" class="collage-img left-right">
+      <img src="foto1.jpg" alt="Collage Foto 12" class="collage-img left-right">
+      <img src="foto4.jpg" alt="Collage Foto 13" class="collage-img left-right">
+      <img src="foto2.jpg" alt="Collage Foto 14" class="collage-img left-right">
+      <img src="foto5.jpg" alt="Collage Foto 14" class="collage-img left-right">
+      <img src="foto1.jpg" alt="Collage Foto 11" class="collage-img left-right">
+    </div>
+
+    <div id="right-border">
+      <img src="foto5.jpg" alt="Collage Foto 15" class="collage-img left-right">
+      <img src="foto2.jpg" alt="Collage Foto 16" class="collage-img left-right">
+      <img src="foto3.jpg" alt="Collage Foto 17" class="collage-img left-right">
+      <img src="foto4.jpg" alt="Collage Foto 18" class="collage-img left-right">
+      <img src="foto1.jpg" alt="Collage Foto 19" class="collage-img left-right">
+      <img src="foto3.jpg" alt="Collage Foto 15" class="collage-img left-right">
+    </div>
+  </div>
+
+  <div id="container">
+    <img src="antes.png" alt="Antes" id="antes">
+    <div>
+      <h2>Feliz Cumpleaños Negro Cabro 👨🏿‍🦲</h2>
+      <img src="cabro.jpg" alt="Imagen de celebración" id="cabro">
+    </div>
+    <img src="despues.png" alt="Después" id="despues">
+  </div>
+
+  <audio id="background-music">
+    <source src="musica.mp3" type="audio/mpeg">
+    Tu navegador no soporta el elemento de audio.
+  </audio>
+  <script>
+    function createConfetti() {
+      const colors = ['#FF5733', '#FF8D1A', '#3A7CA5', '#6BC2F1', '#FFCC8B'];
+      const confettiContainer = document.createElement('div');
+      confettiContainer.className = 'confetti';
+      document.body.appendChild(confettiContainer);
+
+      for (let i = 0; i < 100; i++) {
+        const confettiPiece = document.createElement('div');
+        confettiPiece.className = 'confetti-piece';
+        confettiPiece.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+        confettiPiece.style.left = Math.random() * 100 + 'vw';
+        confettiPiece.style.top = Math.random() * 100 + 'vh';
+        confettiPiece.style.transition = 'transform 5s ease, opacity 5s ease'; // Aumentar duración de la animación
+        setTimeout(() => {
+          confettiPiece.style.transform = `translateY(${Math.random() * 100 + 50}vh)`;
+          confettiPiece.style.opacity = 0;
+        }, 0);
+
+        confettiContainer.appendChild(confettiPiece);
+      }
+
+      setTimeout(() => {
+        document.body.removeChild(confettiContainer);
+      }, 4000); 
+    }
+    function rotateImages() {
+      const images = document.querySelectorAll('.collage-img');
+      images.forEach((img, index) => {
+        setTimeout(() => {
+          img.classList.add('rotate');
+        }, index * 1000); 
+      });
+
+      setTimeout(() => {
+        images.forEach(img => img.classList.remove('rotate'));
+      }, images.length * 1000); 
+    }
+
+
+    window.onload = function() {
+      const music = document.getElementById('background-music');
+      music.play().catch(error => {
+        console.log('La reproducción automática fue bloqueada.');
+      });
+      
+      setInterval(createConfetti, 1000);
+      setInterval(rotateImages, 5000);
+    };
+  </script>
+</body>
+</html>

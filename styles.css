@@ -1,0 +1,146 @@
+/* Estilos para centrar el contenido */
+body {
+  display: flex;
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente */
+  height: 100vh; /* Ocupa toda la altura de la ventana */
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0; /* Fondo suave */
+  text-align: center; /* Centra el texto */
+  flex-direction: column; /* Coloca los elementos en columna (imagen, título, botones) */
+}
+
+#button-container {
+  display: flex;
+  gap: 10px; /* Espacio entre los botones */
+  justify-content: center; /* Asegura que los botones estén centrados horizontalmente */
+  margin-top: 20px;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+img {
+  max-width: 250px; /* Ajusta el tamaño máximo de la imagen si es muy grande */
+  margin-bottom: 20px;
+}
+
+/* Contenedor centrado para el mensaje de cumpleaños */
+#birthday-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centrar el contenido */
+  justify-content: center;
+  margin-top: 20px;
+}
+
+#birthday-image {
+  max-width: 200px; /* Ajusta el tamaño de la imagen del cumpleaños */
+  margin-top: 10px;
+}
+
+/* Estilos de botones */
+:root {
+  --btn-padding: 30px 40px;
+  --btn-margin: 10px;
+  --btn-font-size: 16px;
+  --btn-bg-gradient-yes: linear-gradient(45deg, #FF5733, #FF8D1A);
+  --btn-bg-gradient-no: linear-gradient(45deg, #3A7CA5, #6BC2F1);
+  --btn-text-color: white;
+  --btn-border: 2px solid #FFCC8B;
+  --btn-border-radius: 10px;
+  --btn-hover-bg-gradient-yes: linear-gradient(45deg, #E04C2A, #FF9D4C);
+  --btn-hover-bg-gradient-no: linear-gradient(45deg, #31658A, #5AA6DB);
+  --span-font-size: 18px;
+  --span-text-color: #fcf4f4;
+  --btn-box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  --btn-hover-box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+  --animation-duration: 0.3s;
+}
+
+button {
+  padding: var(--btn-padding);
+  font-size: var(--btn-font-size);
+  margin: var(--btn-margin);
+  cursor: pointer;
+  color: var(--btn-text-color);
+  border: var(--btn-border);
+  border-radius: var(--btn-border-radius);
+  box-shadow: var(--btn-box-shadow);
+  transition: background var(--animation-duration) ease,
+              box-shadow var(--animation-duration) ease,
+              transform var(--animation-duration) ease;
+  position: relative;
+  overflow: hidden;
+  transform: scale(1); /* Escala inicial */
+}
+
+button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 300%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  transform: skewX(-20deg);
+  transition: left var(--animation-duration) ease;
+}
+
+button span {
+  font-size: var(--span-font-size);
+  color: var(--span-text-color);
+  position: relative;
+}
+
+button span::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background: var(--span-text-color);
+  bottom: 0;
+  left: 0;
+  transition: width var(--animation-duration) ease;
+}
+
+button:hover span::after {
+  width: 100%;
+}
+
+/* Botón Sí */
+#so {
+  background: var(--btn-bg-gradient-yes);
+}
+
+#so:hover {
+  background: var(--btn-hover-bg-gradient-yes);
+  box-shadow: var(--btn-hover-box-shadow);
+}
+
+#so:hover::before {
+  left: 100%;
+}
+
+/* Botón No */
+#no {
+  background: var(--btn-bg-gradient-no);
+}
+
+#no:hover {
+  background: var(--btn-hover-bg-gradient-no);
+  box-shadow: var(--btn-hover-box-shadow);
+}
+
+#no:hover::before {
+  left: 100%;
+}
+
+#message {
+  margin-top: 20px;
+  font-size: 20px;
+  color: #333;
+  display: none;
+}
